@@ -1,0 +1,207 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	/*font-size: 0;*/
+}
+body{
+	background: url(../images/bg.jpg);
+	/*perspective: 1000px;*/
+}
+.clearfix:after{
+	display:block;
+	content:"";
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix{
+	zoom: 1;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+header{
+	box-sizing: border-box;
+	width: 100%;
+	height: 40px;
+	background: #000;
+	padding: 5px 15%;
+	color: #FFF;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+header a{
+	line-height: 30px;
+	margin: 5px;
+	color: #FFF;
+	font-size: 14px;
+}
+header img{
+	width: 30px;
+	vertical-align: bottom;
+}
+nav{
+	display: flex;
+	width: 100%;
+	padding: 5px 15%;
+	border-bottom: 1px #999 solid;
+	box-sizing: border-box;
+	background: url(../images/bg.jpg);
+	z-index: 990;
+}
+.fix{
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+nav .logo{
+	display: inline-block;
+	vertical-align: bottom;
+	height: 50px;
+	width: 100px;
+	background: url(../images/logo.png);
+	background-size: 100% 160%;
+	box-sizing: border-box;
+}
+nav a,nav span{
+	display: inline-block;
+	line-height: 50px;
+	margin: 5px;
+	font-size: 20px;
+	color: #999;
+}
+nav .search{
+	float: right;
+	display: inline-block;
+	position: relative;
+	height: 20px;
+	line-height: 50px;
+}
+nav .search input{
+	height: 26px;
+	width: 160px;
+	margin-left: 10px;
+	box-sizing: border-box;
+}
+.search ul{
+	position: absolute;
+	line-height: 10px;
+    list-style: none;
+    display: none;
+    width:137px;
+    height:100px;
+    left: 10px;
+    top: 42px;
+    border: 1px solid gray;
+    border-top: 0;
+    z-index: 999;
+    background: #fff;
+}
+.search ul li{
+   	padding-left:10px;
+	line-height:10px;
+    display: block;
+}
+.search ul li a{
+	line-height:10px;
+    font-size:8px;
+	color:blue;
+	text-decoration: none;
+} 
+.search li:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+nav button{
+	position: absolute;
+	height: 26px;
+	width: 26px;
+	top: 14px;
+	left: 169px;
+	background: #fff;
+	border: 1px solid #999;
+	color: #999;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.audioToggle{
+	display: inline-block;
+	height: 30px;
+	width: 160px;
+	margin: 12px  0 0 40px;
+	background: #666;
+	border-radius: 5px;
+	color: #fff;
+	text-align: center;
+	vertical-align: bottom;
+	cursor: pointer;
+}
+.audioToggle:hover{
+	background: #999;
+}
+.main{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 5px 15%;
+}
+footer{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	line-height: 100px;
+	text-align: center;
+	border-top: 1px solid #999;
+	margin-top: 20px;
+}
+.flo{
+	width: 80px;
+	height: 162px;
+	position: fixed !important;
+	right: 0;
+	bottom: 100px;
+}
+.flo div{
+	width: 80px;
+	height: 80px;
+	margin-top: 2px;
+	background: #999;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+.flo div:hover{
+	background: cornflowerblue;
+}
+.flo div span{
+	font-size: 40px;
+}
+#chat{
+	position: fixed;
+	box-sizing: border-box;
+	padding: 10px;
+	width: 300px;
+	height: 300px;
+	border: #666 solid 1px;
+	box-shadow: 1px 1px 10px #999;
+	background: #efefef;
+	right: 100px;
+	bottom: -300px;
+	transition: bottom .5s linear;
+	z-index: 999;
+}
+#chat textarea{
+	width: 280px;
+	height: 250px;
+	border-radius: 5px;
+}
+#chat button{
+	float: right;
+	width: 100px;
+	height: 30px;
+	cursor: pointer;
+}

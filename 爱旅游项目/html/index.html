@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/video-js.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<script src="../js/jquery-1.8.3.min.js"></script>
+		<script src="../js/myPackage.js"></script>
+	</head>
+	<body>
+		<!--顶部-->
+		<div class="top" id="top">
+			<div class="tleft">
+				<a href="#">客户端</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">手机版</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">收集工具</a>
+			</div>
+			<ul class="tright">
+				<li><a href="register.html">注册</a></li>
+				<li><a href="login.html">登录</a></li>
+				<li class="mail"><a href=""></a></li>
+				<li class="laba"><a href=""></a></li>
+				<li class="pic"></li>
+				<li class="username" id="username"><a href="">吾爱旅行</a></li>
+			</ul>
+		</div>
+		
+		<!--导航栏-->
+		<div class="nav" id="nav">
+			<ul>
+				<li class="logo"></li>
+				<li><a href="">广播&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;发现&nbsp;&nbsp;&nbsp;&nbsp;文章&nbsp;&nbsp;&nbsp;&nbsp;心情&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;专辑&nbsp;&nbsp;&nbsp;&nbsp;生活&nbsp;&nbsp;&nbsp;&nbsp;时尚&nbsp;&nbsp;&nbsp;&nbsp;兴趣&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;Wiki&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;小组&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+				<li>
+					<div class="search">
+						<input type="text" placeholder="请输入要查询的内容" id="input"/>
+						<button></button>
+						<ul class="searchul">
+							
+						</ul>
+					</div>
+				</li>
+				<li>
+					<img src="../img/newmusic.png" onclick="play()"/>
+					<audio id="player" src="../MP3/初音ミク,鏡音リン,GUMI - 神のまにまに.mp3" preload="preload" loop="loop" autoplay="autoplay"></audio>
+				</li>
+			</ul>
+		</div>
+		
+		<!--轮播部分-->
+		<div class="lunbo">
+			<div id='slide' class='slide'>
+				<!--5张轮播图-->
+				<ul id='ul'>
+					<li><img src="../img/upload/pic1.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic2.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic3.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic4.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic5.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic6.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic7.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic8.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic9.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic10.jpg" alt="" /></li>
+				</ul>
+				<!--数字下标-->
+				<ol>
+					<li><img src="../img/upload/pic1.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic2.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic3.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic4.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic5.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic6.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic7.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic8.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic9.jpg" alt="" /></li>
+					<li><img src="../img/upload/pic10.jpg" alt="" /></li>
+				</ol>
+				<!--左右切换按钮-->
+				<div id='arr' class='arr'>
+					<span id='left'>
+						<<
+					</span>
+					<span id='right'>
+						>>
+					</span>
+				</div>
+			</div>
+		</div>
+			
+		<!--推荐部分-->
+		<div class="reco">
+			<h2>热门推荐</h2><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<img src="../img/upload/img1.jpg"/>
+			<h3>标题：【普罗旺斯】</h3>
+			<p>&nbsp;&nbsp;普罗旺斯从诞生之日起，就谨慎地保守着他的秘密，天气阴晴不定，暖风和煦，海风狂野，地势跌宕起伏，平原广阔，峰岭险峻，寂寞的峡谷，苍凉的古堡，蜿蜒的山脉和活泼的都会，全都在这片法国的大地上演绎万种风情。</p>
+		</div>
+		
+		<!--生活-->
+		<div class="life">
+			<h2>生活</h2><h5 class="more">更多>></h5><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<ul>
+				<li><img src="../img/upload/img1.jpg" alt="" /></li>
+				<li><img src="../img/upload/img2.jpg" alt="" /></li>
+				<li><img src="../img/upload/img3.jpg" alt="" /></li>
+				<li><img src="../img/upload/img4.jpg" alt="" /></li>
+				<li><img src="../img/upload/img5.jpg" alt="" /></li>
+				<li><img src="../img/upload/img6.jpg" alt="" /></li>
+			</ul>
+		</div>
+		
+		<!--热门标签-->
+		<div class="hot">
+			<h4>热门标签</h4><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<img src="../img/txt.png"/>
+		</div>
+			
+		<!--时尚-->
+		<div class="fashion">
+			<h2>时尚</h2><h5 class="more">更多>></h5><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<ul>
+				<li><img src="../img/upload/img13.jpg" alt="" /></li>
+				<li><img src="../img/upload/img14.jpg" alt="" /></li>
+				<li><img src="../img/upload/img15.jpg" alt="" /></li>
+				<li><img src="../img/upload/img16.jpg" alt="" /></li>
+				<li><img src="../img/upload/img17.jpg" alt="" /></li>
+				<li><img src="../img/upload/img18.jpg" alt="" /></li>
+			</ul>
+		</div>
+		
+		<!--悟语-->
+		<div class="wy">
+			<h4>悟语</h4><h5 class="more">更多>></h5><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<div class="video">
+				<video id='video' class='video-js vjs-big-play-centered vjs-default-skin width' controls="controls" preload="auto" data-setup='{ }'>
+				<source src='../video/movie.mp4'/>
+				<source src='../video/movie.ogg'/>
+				<source src='../video/movie.webm'/>
+				抱歉，您的游览器要换了！
+			</video>
+			</div>
+			<img src="../img/upload/photos/use1.jpg"/>
+			<div class="floatr">
+				<p>作响_</p>
+				<p>1分钟前</p>
+			</div>
+		</div>
+		
+		<!--主题活动-->
+		<div class="theme">
+			<h4>主题活动</h4><h5 class="more">更多>></h5><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<img src="../img/upload/act1.gif" class="width"/>
+			<div class="center">
+				<h5>晒晒你的DIY成果[一周一主题]</h5><img src="../img/shadow-line.jpg" class="shadowline"/>
+				<h5>截止日期：2013年8月31日</h5>
+			</div>
+		</div>
+		
+		<!--旅行日志-->
+		<div class="tour">
+			<h4>旅行日志</h4><h5 class="more">更多>></h5><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<ul>
+				<li>
+					<img src="../img/upload/arc1.jpg"/>
+					<div class="floatrr">
+						<p>远行，流浪！</p>
+						<p>推荐数：362</p>
+					</div>
+				</li>
+				<li><p>带着年轻的心去流浪</p></li>
+				<li><p>带着年轻的心去流浪</p></li>
+				<li><p>带着年轻的心去流浪</p></li>
+				<li><p>带着年轻的心去流浪</p></li>
+				<li><p>带着年轻的心去流浪</p></li>
+			</ul>
+		</div>
+		
+		<!--活跃会员-->
+		<div class="vip">
+			<h4>活跃会员</h4><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<ul>
+				<li>
+					<img src="../img/upload/photos/use1.jpg"/>
+					<div class="floatrr">
+						<p>作响_</p>
+						<p>发布&nbsp;30&nbsp;专辑&nbsp;5</p>
+					</div>
+				</li>
+				<li>
+					<img src="../img/upload/photos/use2.jpg"/>
+					<div class="floatrr">
+						<p>大媚子</p>
+						<p>发布&nbsp;13&nbsp;专辑&nbsp;3</p>
+					</div>
+				</li>
+				<li>
+					<img src="../img/upload/photos/use3.jpg"/>
+					<div class="floatrr">
+						<p>Honey米儿</p>
+						<p>发布&nbsp;16&nbsp;专辑&nbsp;2</p>
+					</div>
+				</li>
+				<li>
+					<img src="../img/upload/photos/use4.jpg"/>
+					<div class="floatrr">
+						<p>如茅挽君</p>
+						<p>发布&nbsp;21&nbsp;专辑&nbsp;2</p>
+					</div>
+				</li>
+				<li>
+					<img src="../img/upload/photos/use5.jpg"/>
+					<div class="floatrr">
+						<p>雪木其</p>
+						<p>发布&nbsp;23&nbsp;专辑&nbsp;4</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<!--关注我们-->
+		<div class="gz">
+			<h4>关注我们</h4><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<img src="../img/weixin.png" id="saoma"/>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="wx"></li>
+			</ul>
+		</div>
+		
+		<!--兴趣-->
+		<div class="hobby">
+			<h2>兴趣</h2><h5 class="more">更多>></h5><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<ul>
+				<li><img src="../img/upload/img7.jpg" alt="" /></li>
+				<li><img src="../img/upload/img8.jpg" alt="" /></li>
+				<li><img src="../img/upload/img9.jpg" alt="" /></li>
+				<li><img src="../img/upload/img10.jpg" alt="" /></li>
+				<li><img src="../img/upload/img11.jpg" alt="" /></li>
+				<li><img src="../img/upload/img12.jpg" alt="" /></li>
+			</ul>
+		</div>
+		
+		<!--时尚-->
+		<div class="fashion2">
+			<h2>时尚</h2><h5 class="more">更多>></h5><img src="../img/shadow-line.jpg" class="shadowline"/>
+			<ul>
+				<li><img src="../img/upload/img13.jpg" alt="" /></li>
+				<li><img src="../img/upload/img14.jpg" alt="" /></li>
+				<li><img src="../img/upload/img15.jpg" alt="" /></li>
+				<li><img src="../img/upload/img16.jpg" alt="" /></li>
+				<li><img src="../img/upload/img17.jpg" alt="" /></li>
+				<li><img src="../img/upload/img18.jpg" alt="" /></li>
+			</ul>
+		</div>
+		
+		<img src="../img/shadow-line.jpg" class="footerline"/>
+		<footer><p>版权所有&copy;爱旅行</p></footer>
+		<img src="../img/backtop.png" alt="" id="backtop"/>
+		<img src="../img/feedback.png" alt="" id="feedback"/>
+		
+		<!--用户名-->
+		<script>
+			//获取cookie
+			function getCookie(key){
+				var arr1 = document.cookie.split('; ');
+				for(var i=0;i<arr1.length;i++){
+					var arr2  = arr1[i].split('=');
+					if(arr2[0]==key){
+						return decodeURI(arr2[1]);
+					}
+				}
+			}
+			var username = document.getElementById('username');
+			username.value = getCookie('username');
+		</script>
+		
+		<!--扫微信二维码-->
+		<script>
+			$(function(){
+				$('.wx').on('mouseover click',function(){
+					$('#saoma').css('display','block');
+				});
+				$('.wx').on('mouseout',function(){
+					$('#saoma').css('display','none');
+				});
+			});
+		</script>
+		
+		<!--图片轮播-->
+		<script>
+			var slide = document.getElementById('slide');
+			var imgWidth = slide.offsetWidth;
+			var ul  = slide.children[0];
+			var ulLiArr = ul.children;
+			var ol  = slide.children[1];
+			var olLiArr = ol.children;
+			var key = 0; //---图片索引
+			var square = 0; //---下标索引
+			var timer = null;
+			//---复制第一张图片的li，添加到ul的末尾,下次循环，从第二张图片开始，形成环状
+			var ulNewLi = ul.children[0].cloneNode(true);//---深复制
+			ul.appendChild(ulNewLi);
+			olLiArr[0].className='current';
+			//---点击下标，轮播移动
+			//---循环ol下边的li
+			for(var i=0;i<olLiArr.length;i++){
+				olLiArr[i].index = i;//---把索引赋值给属性index
+				olLiArr[i].onclick = function(){
+					//---排他思想
+					for(var j=0;j<olLiArr.length;j++){
+						olLiArr[j].className='';
+					}
+					this.className='current';//---只有点击的点才会有背景颜色，current
+					
+					//---点击的同时，存住i,就是index
+					key = square = this.index;
+					//---运用缓冲公式
+					animate(ul,-this.index*imgWidth);
+				}
+			}
+			//---自动运行函数
+			function automove(){
+			//---图片变化
+				//---通过改变key的值，来模拟图片的变化，
+				key++;
+				//---判断临界值
+				if(key > olLiArr.length){//---k>5,k=6,一个循环结束，下次循环开始
+					ul.style.left = 0 + 'px';
+					key = 1;//---下次从第二张开始
+				}
+				animate(ul,-key*imgWidth);
+			//---下标变化
+				square++;
+				//---判断临界值
+				if(square > olLiArr.length-1){
+					square = 0;
+				}
+				//---排他思想
+				for(var j=0;j<olLiArr.length;j++){
+					olLiArr[j].className='';
+				}
+				olLiArr[square].className='current';
+			}
+			//---定时器调用
+			timer = setInterval(function(){
+				automove();
+			},3000);
+			
+			//---左右点击切换
+//			spanArr[0].onclick = function(){
+//				key--;
+//				if(key<0){
+//					key = olLiArr.length-1;
+//					ul.style.left = -imgWidth*(olLiArr.length) + 'px';	
+//				}
+//				animate(ul,-key*imgWidth);
+//				
+//				square--;
+//				//---判断临界值
+//				if(square <0){
+//					square = olLiArr.length-1;
+//				}
+//				//---排他思想
+//				for(var j=0;j<olLiArr.length;j++){
+//					olLiArr[j].className='';
+//				}
+//				olLiArr[square].className='current';
+//			};
+			//---鼠标悬停
+			slide.onmouseover = function(){
+				arr.style.display = "block";
+				ol.style.display = "block";
+				clearInterval(timer);
+			}
+			slide.onmouseout = function(){
+				arr.style.display = "none";	
+				ol.style.display = "none";
+				timer = setInterval(function(){
+					automove();
+				},3000);
+			}
+			//---缓冲
+			function animate(ele,target){
+				clearInterval(ele.timer);
+				ele.timer = setInterval(function(){
+					var step = (target-ele.offsetLeft)/10;
+						step = step>0?Math.ceil(step):Math.floor(step);
+						ele.style.left = ele.offsetLeft + step + 'px';
+					if(Math.abs(target-ele.offsetLeft)<Math.abs(step)){
+						ele.style.left = target + 'px';
+						clearInterval(ele.timer);
+					}
+				},20);
+			}
+		</script>
+	
+		<!--返回头部-->
+		<script>
+			var img = document.getElementById('backtop');
+			var leader = 0;
+			var target = 0;
+			var backtimer = null;
+			window.onscroll = function(){
+				//---显示隐藏
+				if(scroll().top>200){
+					img.style.display  = 'block';
+				}else{
+					img.style.display  = 'none';
+				}
+				//---返回头部
+				//---拿到滚动的距离
+				leader = scroll().top;
+				console.log('leader='+leader);
+			}
+			img.onclick = function(){
+				clearInterval(backtimer);
+				backtimer = setInterval(function(){
+					var step = (target-leader)/10;
+					console.log('step='+step);
+					step = step>0?Math.ceil(step):Math.floor(step);
+					leader = leader + step;
+					//---window.scrollTo(x,y);x,y为坐标
+					window.scrollTo(0,leader);
+					if(leader == 0){
+						clearInterval(backtimer);
+					}
+				},30);
+			}
+		</script>
+		
+		<!--固定导航栏-->
+		<!--<script>
+			var Top = document.getElementById('top');
+			var topHeight = Top.offsetHeight;//top头部的高度,关键字
+			console.log(topHeight);
+			var nav = document.getElementById('nav');
+			//---监测屏幕滚动
+			window.onscroll = function(){
+				//---判断卷曲的高度
+				if(scroll().top > topHeight){
+					nav.className="fixed";
+				}else{
+					nav.className="";
+				}			
+			}
+		</script>-->
+		<script >
+			$(function(){
+		//        导航栏固定
+		        var Height = $(".top").height();
+		        $(window).scroll(function (){
+		            var docScrollTop = $(document).scrollTop();
+		            if(docScrollTop>Height){
+		                $(".nav").css({
+		                    position:"fixed",
+		                    background:"rgba(0,0,0,0.7)",
+		                    top:"0",
+		                    zIndex:'100'
+		                })
+		            }else {
+		                $(".nav").css({
+		                    background:"",
+		                    position:"static"
+		                })
+		            }
+		        })
+		    });
+		</script>
+		
+		<!--图标随动-->
+		<script>
+			var backtop = document.getElementById('backtop');
+			var feedback = document.getElementById('feedback');
+			window.onscroll = function(){
+				var val = scroll().top;
+				animateTop(backtop,val+440);
+//				animateTop(side2,val+200);
+				animateTop(feedback,val+500);
+			}
+		</script>
+	
+		<!--音乐播放器-->
+		<script>
+			var musictimer = null;
+//			var flag = false;
+			window.onload = function(){
+				var player = $('#player')[0];
+				
+			}
+			//---播放
+			function play(){
+//				cover.style.webkitAnimationPlayState='';
+//				title.style.webkitAnimationPlayState='';
+				player.play();
+//				//---同步滑块
+//				musictimer = setInterval(function(){
+//					var value = player.currentTime;
+//					$('#slider').slider('option','value',value);
+//				},500);
+			}
+			//---暂停
+			function pause(){
+//				cover.style.webkitAnimationPlayState='paused';
+//				title.style.webkitAnimationPlayState='paused';
+				player.pause();
+//				clearInterval(musictimer);
+			}
+		</script>
+		
+		<!--视频播放器-->
+		<script>
+			var player = videojs('video',{
+				techOrder:['html5','flash'],
+				width:'200',
+				height:'135',
+				poster:'../img/videobg.jpg',
+				mydata:{
+					title:'爱奇艺'
+				}
+			},function(){
+				this.pause();
+				var Text = document.createElement('div');
+				Text.className='Text';
+				Text.innerHTML=this.options().mydata.title||'';
+				this.el().appendChild(Text);
+				//传给播放器上显示的用户名
+				this.userName = Text;
+			});
+			
+			player.on('play',function(e){
+				this.userName.style.display='block';
+			})
+		</script>
+	
+		<!--模拟百度搜索-->
+		<script>
+			function callback(data){
+	    		$('.searchul').html('');
+	    		var str = '';
+	    		if(data.s.length){
+	    			for(var i=0;i<data.s.length;i++){
+	    				str +='<li><a href="http://www.baidu.com/s?wd='+data.s[i]+'">'+data.s[i]+'</a></li>';
+	    			};
+	    			$('.searchul').html(str).slideDown();
+	    		}else{
+	    			$('.searchul').hide();
+	    		}
+	    	}
+		</script>
+		<script>
+			$(function(){
+    		$('#input').on('keyup',function(){
+    			if($(this).val()!=''){
+    				var $Script = $('script');
+    				var Url = 'http://suggestion.baidu.com/su?wd='+ $(this).val() +'&cb=callback';
+    				$Script.attr('src',Url);
+    				$(document).append($Script);
+    			}else{
+    				$('.searchul').hide();
+    			}
+    		});
+
+    	})
+		</script>
+	</body>
+</html>

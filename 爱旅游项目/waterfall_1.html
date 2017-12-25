@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+				text-decoration: none;
+			}
+			body{
+				position: relative;
+				background: url(./img/bg.jpg);
+			}
+			h2,h3,h4,h5,p{
+				color: #a5a3a3;
+			}
+			h4{
+				color: greenyellow;
+			}
+			p{
+				font-size:14px;
+				
+			}
+			/*<!--顶部-->*/
+			.top{
+				position: relative;
+				width: 100%;
+				height: 40px;
+				background: #000;
+				color: #fff;
+			}
+			.top .tleft{
+				position: absolute;
+				top: ;
+				left:150px;
+				/*border: 1px solid white;*/
+			}
+			.top .tleft a,.top .tright a{
+				display: inline-block;
+				line-height: 40px;
+				color: #fff;
+				font-size: 12px;
+			}
+			.top .tright{
+				position: absolute;
+				padding: 2px;
+				width: auto;
+				right: 150px;
+				/*border: 1px solid white;*/
+			}
+			.top .tright li{
+				float: left;
+				margin-right: 5px;
+				width: 36px;
+				line-height: 40px;
+			}
+			.top .tright li.mail{
+				height: 30px;
+				background: url(./img/icon_bg.png) -114px -114px;
+				/*border: 1px solid white;*/
+			}
+			.top .tright li.laba{
+				width: 30px;
+				height: 26px;
+				color: #fff;
+				background: url(./img/icon_bg.png) -169px -65px;
+				/*background-color: #fff;*/
+				/*border: 1px solid white;*/
+			}
+			.top .tright li.pic{
+				height: 30px;
+				background: url(./img/tou.png);
+				background-size: cover;
+			}
+			.top .tright li.username{
+				width: 70px;
+				height: 30px;
+			}
+			/*<!--导航栏-->*/
+			.nav{
+				position: relative;
+				width: 100%;
+				height: 60px;
+				border: 1px solid #ccc;
+				background: url(./img/bg.jpg);
+			}
+			.nav ul{
+				position: absolute;
+				left: 150px;
+				clear: both;
+			}
+			.nav ul li{
+				float: left;
+				line-height: 60px;
+				clear: right;
+			}
+			.nav ul li a{
+				color: #868484;
+			}
+			.nav ul li.logo{
+				width: 120px;
+				height:60px;
+				background: url(./img/logo.png);
+				background-size: cover;
+			}
+			.nav ul li:nth-child(2){
+				margin-left: 32px;
+			}
+			.nav ul li:nth-child(7){
+				width:260px ;
+				margin-left: 20px;
+			}
+			.nav ul li:nth-child(7) .search{
+				width:240px ;
+				height: 60px;
+				margin-top: 15px;
+				position: relative;
+			}
+			.nav ul li:nth-child(7) .search input[type='text']{
+				position: absolute;
+				left: 0px;
+				width: 220px;
+				height: 30px;
+				line-height: 60px;
+			}
+			.nav ul li:nth-child(7) .search button{
+				position: absolute;
+				left: 224px;
+				width: 34px;
+				height: 34px;
+				background: url(../img/icon_bg.png) -118px -43px;
+				border: none;
+				border: 1px solid #ccc;
+				border-left: none;
+				line-height: 60px;
+				cursor: pointer;
+			}
+			.nav ul li:nth-last-child {
+				border: 1px solid #000;
+			}
+			.nav ul li img{
+				margin-left: 40px;
+				margin-top: 15px;
+			}
+			
+			.wrapper{
+	            padding:50px 100px;
+	        }
+	        .wrapper img {
+	            padding:5px;
+	            border-radius: 5px;
+	            width: 100%;
+	            height: 150px;
+	        }
+	        .wrapper p{
+	            padding:5px;
+	            color: #81725B;
+	            text-indent: 2em;
+	            font-size:14px;
+	            font-family: 黑体;
+	            letter-spacing: 2px;
+	        }
+	        .wrapper .box {
+	            position: relative;
+	        }
+	
+	        .wrapper .inner{
+	            padding: 10px;
+	            width: 228px;
+	            position: absolute;
+	        }
+	
+	        .wrapper .tips {
+	            width:500px;
+	            height:40px;
+	            margin:20px auto;
+	            text-align: center;
+	            line-height: 40px;
+	            border-radius: 5px;
+	            font-size:16px;
+	            cursor: pointer;
+	            background:white;
+	        }
+		</style>
+	</head>
+	<body>
+		<!--顶部-->
+		<div class="top" id="top">
+			<div class="tleft">
+				<a href="#">客户端</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">手机版</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">收集工具</a>
+			</div>
+			<ul class="tright">
+				<li><a href="newregister.html">注册</a></li>
+				<li><a href="login.html">登录</a></li>
+				<li class="mail"><a href=""></a></li>
+				<li class="laba"><a href=""></a></li>
+				<li class="pic"></li>
+				<li class="username"><a href="">吾爱旅行</a></li>
+			</ul>
+		</div>
+		
+		<!--导航栏-->
+		<div class="nav" id="nav">
+			<ul>
+				<li class="logo"></li>
+				<li><a href="">广播&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;发现&nbsp;&nbsp;&nbsp;&nbsp;文章&nbsp;&nbsp;&nbsp;&nbsp;心情&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;专辑&nbsp;&nbsp;&nbsp;&nbsp;生活&nbsp;&nbsp;&nbsp;&nbsp;时尚&nbsp;&nbsp;&nbsp;&nbsp;兴趣&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;Wiki&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;小组&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+				<li>
+					<div class="search">
+						<input type="text" placeholder="请输入要查询的内容" id="input"/>
+						<button></button>
+						<ul class="searchul">
+							
+						</ul>
+					</div>
+				</li>
+				<li>
+					<img src="./img/music.png" onclick="play()"/>
+					<audio id="player" src="./MP3/初音ミク,鏡音リン,GUMI - 神のまにまに.mp3" preload="preload" loop="loop"></audio>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="wrapper">
+        <div class="box">
+            <div class='inner'>
+                <img src="upload/new1.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new2.jpg" alt="" class="lazy">
+                <p>"朋友马上要结婚了，准备送她一个好点的礼物，前段时间一直叫着要华
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    为P9一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new3.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new4.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new5.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new2.jpg" alt="" class="lazy">
+                <p>"朋友马上要结婚了，一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    准备送她一个好点的礼物，前段时间一直叫着要华为P9/p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new3.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new4.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new5.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new3.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new4.jpg" alt=""class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new5.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new1.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new2.jpg" alt="" class="lazy">
+                <p>"朋友马上要结婚了，准备送她一个好点的礼物，前段时间一直叫着要华
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    为P9一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new3.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new4.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new5.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new1.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new2.jpg" alt="" class="lazy">
+                <p>"朋友马上要结婚了，准备送她一个好点的礼物，前段时间一直叫着要华
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    为P9一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new3.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new4.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new5.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new1.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new2.jpg" alt="" class="lazy">
+                <p>"朋友马上要结婚了，准备送她一个好点的礼物，前段时间一直叫着要华
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    为P9一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new3.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new4.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new5.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new1.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new2.jpg" alt="" class="lazy">
+                <p>"朋友马上要结婚了，准备送她一个好点的礼物，前段时间一直叫着要华
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    为P9一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new3.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new4.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new5.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new1.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new2.jpg" alt="" class="lazy">
+                <p>"朋友马上要结婚了，准备送她一个好点的礼物，前段时间一直叫着要华
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    为P9一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+
+            <div class='inner'>
+                <img src="upload/new3.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，</p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new4.jpg" alt="" class="lazy">
+                <p>姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                    姥姥说：姥爷年轻的时候有一次喝醉把亲戚家的狗背回去了…村里人都知道
+                </p>
+            </div>
+            <div class='inner'>
+                <img src="upload/new5.jpg" alt="" class="lazy">
+                <p>一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                    一男子驾车路过一处偏僻的地方，路边一个精疲力尽的和尚挡住了。和尚说：“施主，能稍我一段路程吗？”，
+                </p>
+            </div>
+        </div>
+        <div class="tips" onclick="getData()">正在加载...</div>
+        </div>
+        <script src='js/jquery-1.8.3.min.js'></script>
+	    <script type="text/javascript" src='js/waterfall-3.11.min.js'></script>
+	    <script type="text/javascript" src='js/template-native.js'></script>
+		
+	    <!-- 定义的模板 -->
+	    <script id='template' type='text/html'>
+	        <% for(var i=0;i<items.length;i++){%>
+	        <div class='inner'>
+	            <img src="<%=items[i].path%>" alt="">
+	            <p><%=items[i].text%></p>
+	        </div>
+	        <%}%>
+	    </script>
+	    <script>
+//	        $('.box').waterfall('.inner');//---瀑布流
+			$('.box').waterfall('.inner');
+	        function getData(){
+	            $.ajax({
+	                url:'waterfalllist.php',
+	                dataType:'json',
+	                success:function(data){
+	                    console.log(data);
+	                    //---data用来渲染模板
+	                    var html = template('template',data);
+	                    $('.box').append(html);
+	
+	                    $('.box').waterfall('.inner');//---加载出来的图片也要执行瀑布流
+	                }
+	            });
+	        }
+	    </script>
+	</body>
+</html>

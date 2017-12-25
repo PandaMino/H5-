@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+		<script src="../js/index.js"></script>
+	</head>
+	<body>
+		<div class="register">
+			<div class="regleft">
+				<h3>普通注册</h3>
+				<table>
+					<tr>
+						<td class="q">邮箱地址:</td>
+						<td class="h"><input type="email" name="email" id="email" value="" /></td>
+						<!--正确提示信息-->
+						<i></i>
+					</tr>
+					<tr>
+						<!--信息提示项-->
+						<div class='tip' id="tip3">
+							<i></i>
+							<span></span>
+						</div>
+					</tr>
+					<tr>
+						<td class="q">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</td>
+						<td class="h"><input type="password" name="pwd" id="pwd" value="" /></td>
+						<!--正确提示信息-->
+							<i></i>
+					</tr>
+					<tr>
+						<!--信息提示项-->
+						<div class='tip' id="tip1">
+							<i></i>
+							<span></span>
+						</div>
+					</tr>
+					<tr>
+						<td class="q">确认密码:</td>
+						<td class="h"><input type="password" name="pwd2" id="pwd2" value="" /></td>
+						<!--正确提示信息-->
+							<i></i>
+					</tr>
+					<tr>
+						<!--信息提示项-->
+						<div class='tip' id="tip2">
+							<i></i>
+							<span></span>
+						</div>
+					</tr>
+				</table>
+				<input type="submit" name="" id="btn" value="注册" />
+			</div>
+			<div class="regright">
+				<h3>快速注册</h3>
+				<table>
+					<tr>
+						<td><button class="qq">QQ号登录</button></td>
+						<td><button class="qq xl">新浪微博账号登录</button></td>
+					</tr>
+					<tr>
+						<td><button class="qq tb">淘宝账号登录</button></td>
+						<td><button class="qq tx">腾讯微博账号登录</button></td>
+					</tr>
+					<tr>
+						<td><button class="qq db">豆瓣账号登录</button></td>
+						<td></td>
+					</tr>
+				</table>
+				<a href="#">已有账号，现在去登陆！</a>
+			</div>
+		</div>
+		<script>
+			function setCookie(key,value,time){
+			var oDate = new Date();
+			oDate.setDate(oDate.getDate() + time);
+			document.cookie=key+'='+encodeURI(value)+';expires='+oDate.toGMTString();
+			}
+			//获取cookie
+			function getCookie(key){
+				var arr1 = document.cookie.split('; ');
+				for(var i=0;i<arr1.length;i++){
+					var arr2  = arr1[i].split('=');
+					if(arr2[0]==key){
+						return decodeURI(arr2[1]);
+					}
+				}
+			}
+			//删除cookie
+			function removeCookie(key){
+				 setCookie(key,'',-1);
+			}
+			var regs = {
+				//密码
+				pwdReg:/^.{6,20}$/,
+				//---邮箱
+				emailReg:/^[a-zA-Z\d]+([-_.][A-Za-z\d]+)*@([a-zA-Z\d]+[-.])+[a-zA-Z\d]{2,5}$/
+			}
+			
+			window.onload = function(){
+				var username = document.getElementById('email');
+				var pwd = document.getElementById('pwd');
+				var pwd2 = document.getElementById('pwd2');
+				var btn = document.getElementById('btn');
+				btn.onclick = function(){
+//					setCookie('username',username.value,3);
+//					setCookie('pwd',pwd.value,4);
+					if(username.value!=''&&pwd.value!=''&&pwd2.value!=''){
+					if (pwd.value!=pwd2.value) {
+						alert('两次密码不一样');
+						pwd2.value='';
+					}else{
+						if (regs.emailReg.test(username.value)&&regs.pwdReg.test(pwd.value)){
+							setCookie('username',username.value,3);
+							setCookie('pwd',pwd.value,3);
+							window.location='login.html';
+						} else{
+							alert('邮箱格式或密码格式不正确');
+						}
+					}
+				}
+				}
+			}
+		</script>
+	</body>
+</html>

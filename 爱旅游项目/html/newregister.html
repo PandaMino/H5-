@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+		<script src="../js/jquery-1.8.3.min.js"></script>
+		<!--<script src="../js/index.js"></script>-->
+	</head>
+	<body>
+		<div class="register">
+			<div class="regleft">
+				<h3>普通注册</h3>
+				<form action="" onsubmit="return checkData()" method="get">
+					<!--验证邮箱-->
+					<div class='register-box'>
+						<!--验证表单项-->
+						<div class='box default'>
+							<label for="email">邮箱验证 ： </label>
+							<input type="text" id='email' name='email' placeholder="请输入邮箱"/>
+							<!--正确提示信息-->
+							<i></i>
+						</div>
+						<!--信息提示项-->
+						<div class='tip'>
+							<i></i>
+							<span></span>
+						</div>
+					</div>	
+					<!--设置密码-->
+					<div class='register-box'>
+						<!--验证表单项-->
+						<div class='box default'>
+							<label for="pwd">设置密码  ： </label>
+							<input type="password" id='pwd' name='pwd' placeholder="请输入设置密码"/>
+							<!--正确提示信息-->
+							<i></i>
+						</div>
+						<!--信息提示项-->
+						<div class='tip'>
+							<i></i>
+							<span></span>
+						</div>
+					</div>
+					<!--确认密码-->
+					<div class='register-box'>
+						<!--验证表单项-->
+						<div class='box default'>
+							<label for="pwd2">确认密码  ： </label>
+							<input type="password" id='pwd2' name='pwd2' placeholder="请再次输入密码"/>
+							<!--正确提示信息-->
+							<i></i>
+						</div>
+						<!--信息提示项-->
+						<div class='tip'>
+							<i></i>
+							<span></span>
+						</div>
+					</div>
+					<!--信息提交-->
+					<div class='sub'>
+						<input type="submit" id='btn'/>
+					</div>
+				</form>
+			</div>
+			<div class="regright">
+				<h3>快速注册</h3>
+				<table>
+					<tr>
+						<td><button class="qq">QQ号登录</button></td>
+						<td><button class="qq xl">新浪微博账号登录</button></td>
+					</tr>
+					<tr>
+						<td><button class="qq tb">淘宝账号登录</button></td>
+						<td><button class="qq tx">腾讯微博账号登录</button></td>
+					</tr>
+					<tr>
+						<td><button class="qq db">豆瓣账号登录</button></td>
+						<td></td>
+					</tr>
+				</table>
+				<a href="login.html">已有账号，现在去登陆！</a>
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+			var username=document.getElementById('email');
+			var pwd = document.getElementById('pwd');
+			var pwd2 = document.getElementById('pwd2');
+			
+			var btn=document.getElementsByTagName('btn');
+			//注册正则验证，并设置cookie
+				//设置获取cookie
+			function setCookie(key,value,time){
+				var oDate = new Date();
+				oDate.setDate(oDate.getDate() + time);
+				document.cookie=key+'='+encodeURI(value)+';expires='+oDate.toGMTString();
+			}
+			
+			var regs = {
+				//密码
+				pwdReg:/^.{6,20}$/,
+				//---邮箱
+				emailReg:/^[a-zA-Z\d]+([-_.][A-Za-z\d]+)*@([a-zA-Z\d]+[-.])+[a-zA-Z\d]{2,5}$/
+			}
+			
+			
+			btn.onclick =function(){
+				if(username.value!=''&&pwd.value!=''&&pwd2.value!=''){
+					if (pwd.value!=pwd2.value) {
+						alert('两次密码不一样');
+						pwd2.value='';
+					} else{
+						if (regs.emailReg.test(username.value)&&regs.pwdReg.test(pwd.value)){
+							setCookie('username',username.value,3);
+					window.location='login.html';
+						} else{
+							alert('邮箱格式或密码格式不正确');
+						}
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>

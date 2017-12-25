@@ -1,0 +1,155 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+}
+body{
+	position: relative;
+	background: url(../img/bg.jpg);
+}
+.shadowline{
+	width: 100%;
+}
+.login{
+	margin: 180px auto;
+	width: 900px;
+	height: 370px;
+	background: #fff;
+	/*border: 1px solid yellow;*/
+}
+.loleft{
+	padding: 10px;
+	float: left;
+	width: 536px;
+	height: 350px;
+	background: ;
+	/*border: 1px solid #000;*/
+}
+.loleft ul{
+	margin-top: 5px;
+	width: 100%;
+	position: relative;
+}
+.loleft li{
+	position: absolute;
+	width: 150px;
+	height: 300px;
+	/*border: 1px solid red;*/
+}
+.loleft img{
+	width: 100%;
+	cursor: pointer;
+	transition: transform 1s;
+	transition: all 1s;
+}
+.loleft img:hover{
+	transform: scale(1.2,1.2);
+}
+.loleft li:nth-child(1){
+	top: 0px;
+	left: 0px;
+	width: 204px;
+	height: auto;
+}
+.loleft li:nth-child(2){
+	left: 210px;
+	width: 310px;
+}
+.loleft li:nth-child(3){
+	left: 210px;
+	top: 208px;
+	height: 200px;
+}
+.loleft li:nth-child(4){
+	left: 369px;
+	top: 208px;
+	height: 200px;
+}
+.loright{
+	padding: 10px;
+	float: left;
+	width: 320px;
+	height: 350px;
+	/*background: #fff;*/
+	text-align: center;
+	/*border: 1px solid #000;*/
+}
+.loright input[type='email'],.loright input[type='password']{
+	padding-left: 4px;
+	margin-top:20px ;
+	width: 260px;
+	height: 40px;
+	/*border: none;
+	border-radius: 5px;*/
+}
+.loright input[type='submit']{
+	margin-top:20px ;
+	width: 130px;
+	height: 40px;
+	color: white;
+	background: greenyellow;
+	border: none;
+	border-radius: 5px;
+}
+.loright input[type='checkbox']{
+	margin-top:10px ;
+	margin-left: 15px;
+}
+.loright span{
+	margin-top:20px ;
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;border-radius: 5px;
+	border: 1px solid #ccc;
+	cursor:pointer;
+	transition: transform 1s;
+	transition: all 1s;
+}
+.loright span:hover{
+	transform: scale(0.9,0.9);
+}
+.loright span.qq{
+	padding-left:24px;
+	width: 90px;
+	height: 40px;
+	background: url(../img/qq.jpg) -10px no-repeat;
+}
+.loright span.weibo{
+	padding-left:22px;
+	margin-left:10px;
+	font-size: 14px;
+	width: 160px;
+	background: url(../img/weibo.png) -4px -2px no-repeat;
+}
+.littlea{
+	margin-top: 15px;
+	float: right;
+	width:230px;
+	height: 30px;
+}
+.littlea li{
+	float: left;
+	width: 76px;
+	height: 30px;
+	line-height: 30px;
+}
+.littlea li a{
+	color: blue;
+	font-size: 12px;
+}
+footer{
+	position: absolute;
+	width: 100%;
+	top:400px;
+	text-align: center;
+}
+footer p{
+	width: 140px;
+	margin-left: 47%;
+	color: #ccc;
+}
+

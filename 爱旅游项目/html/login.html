@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+	</head>
+	<body>
+		<div class="login">
+			<div class="loleft">
+				<h4>发现更多精彩！</h4>
+				<ul>
+					<li><img src="../img/upload/log1.jpg" alt="" /></li>
+					<li><img src="../img/upload/log2.jpg" alt="" /></li>
+					<li><img src="../img/upload/log3.jpg" alt="" /></li>
+					<li><img src="../img/upload/log4.jpg" alt="" /></li>
+				</ul>
+				
+			</div>
+			<div class="loright">
+				<h2>用户登录</h2><img src="../img/shadow-line.jpg" alt="" class="shadowline"/>
+				<input type="email" name="" id="username" value="" placeholder="微博账号/QQ号码/电子邮箱"/>
+				<input type="password" name="" id="pwd" value="" placeholder="密码"/>
+				<input type="submit" name="" id="logbtn" value="登录" />
+				<input type="checkbox" name="" id="ck" value="" checked="checked"/>下次自动登录<br />
+				<span class="qq" id="logbtnqq"><li></li>QQ号登录</span>
+				<span class="weibo" id="logbtnwb"><li></li>新浪微博账号登录</span>
+				<ul class="littlea">
+					<li><a href="">忘记密码？</a>&nbsp;|</li>
+					<li>&nbsp;<a href="register.html">注册新账号</a>&nbsp;|</li>
+					<li>&nbsp;<a href="">意见反馈</a></li>
+				</ul>
+			</div>
+		</div>
+		<footer><p>版权所有&copy;爱旅行</p></footer>
+		<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+		<script>
+			function setCookie(key,value,time){
+				var oDate = new Date();
+				oDate.setDate(oDate.getDate() + time);
+				document.cookie=key+'='+encodeURI(value)+';expires='+oDate.toGMTString();
+			}
+			//获取cookie
+			function getCookie(key){
+				var arr1 = document.cookie.split('; ');
+				for(var i=0;i<arr1.length;i++){
+					var arr2  = arr1[i].split('=');
+					if(arr2[0]==key){
+						return decodeURI(arr2[1]);
+					}
+				}
+			}
+			//删除cookie
+			function removeCookie(key){
+				 setCookie(key,'',-1);
+			}
+		$(function(){
+			var username = document.getElementById('username');
+			var pwd = document.getElementById('pwd');
+			
+			//页面一加载完成,就判断有没有cookie
+			if(getCookie('username')){
+				alert('欢迎回来,'+getCookie('username'));
+				username.value = getCookie('username');
+				pwd.value = getCookie("pwd");
+				
+				$('#logbtn').on('click',function(){
+					location.href='index.html';
+				});
+			}else{
+				alert('请先注册哦');
+			}
+		});
+		
+		
+	</script>
+	</body>
+</html>

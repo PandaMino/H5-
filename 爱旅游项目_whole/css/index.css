@@ -1,0 +1,496 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+}
+body{
+	position: relative;
+	background: url(../img/bg.jpg);
+}
+h2,h3,h4,h5,p{
+	color: #a5a3a3;
+}
+h4{
+	color: greenyellow;
+}
+p{
+	font-size:14px;
+	
+}
+/*<!--顶部-->*/
+.top{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	background: #000;
+	color: #fff;
+}
+.top .tleft{
+	position: absolute;
+	top: ;
+	left:150px;
+	/*border: 1px solid white;*/
+}
+.top .tleft a,.top .tright a{
+	display: inline-block;
+	line-height: 40px;
+	color: #fff;
+	font-size: 12px;
+}
+.top .tright{
+	position: absolute;
+	padding: 2px;
+	width: auto;
+	right: 150px;
+	/*border: 1px solid white;*/
+}
+.top .tright li{
+	float: left;
+	margin-right: 5px;
+	width: 36px;
+	line-height: 40px;
+}
+.top .tright li.mail{
+	height: 30px;
+	background: url(../img/icon_bg.png) -114px -114px;
+	/*border: 1px solid white;*/
+}
+.top .tright li.laba{
+	width: 30px;
+	height: 26px;
+	color: #fff;
+	background: url(../img/icon_bg.png) -169px -65px;
+	/*background-color: #fff;*/
+	/*border: 1px solid white;*/
+}
+.top .tright li.pic{
+	height: 30px;
+	background: url(../img/tou.png);
+	background-size: cover;
+}
+.top .tright li.username{
+	width: 70px;
+	height: 30px;
+}
+/*<!--导航栏-->*/
+.nav{
+	position: relative;
+	width: 100%;
+	height: 60px;
+	border: 1px solid #ccc;
+	background: url(../img/bg.jpg);
+}
+.nav ul{
+	position: absolute;
+	left: 150px;
+	clear: both;
+}
+.nav ul li{
+	float: left;
+	line-height: 60px;
+	clear: right;
+}
+.nav ul li a{
+	color: #868484;
+}
+.nav ul li.logo{
+	width: 120px;
+	height:60px;
+	background: url(../img/logo.png);
+	background-size: cover;
+}
+.nav ul li:nth-child(2){
+	margin-left: 32px;
+}
+.nav ul li:nth-child(7){
+	width:260px ;
+	margin-left: 20px;
+}
+.nav ul li:nth-child(7) .search{
+	width:240px ;
+	height: 60px;
+	margin-top: 15px;
+	position: relative;
+}
+.nav ul li:nth-child(7) .search input[type='text']{
+	position: absolute;
+	left: 0px;
+	width: 220px;
+	height: 30px;
+	line-height: 60px;
+}
+.nav ul li:nth-child(7) .search button{
+	position: absolute;
+	left: 224px;
+	width: 34px;
+	height: 34px;
+	background: url(../img/icon_bg.png) -118px -43px;
+	border: none;
+	border: 1px solid #ccc;
+	border-left: none;
+	line-height: 60px;
+	cursor: pointer;
+}
+.nav ul li:nth-last-child {
+	border: 1px solid #000;
+}
+/*定义一个帧动画*/
+	/*关键字 动画名字*/
+	@-webkit-keyframes scroll{
+		0%{
+			-webkit-transform: rotate(0deg);
+		}
+		50%{
+			-webkit-transform: rotate(180deg);
+		}
+		100%{
+			-webkit-transform: rotate(360deg);
+		}
+	}
+.nav ul li img{
+	width: 50px;
+	border-radius: 50%;
+	margin-left: 40px;
+	margin-top: 6px;
+	cursor: pointer;
+	border: 1px solid #000 rgba(0,0,0,0.9);
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+	-webkit-animation: scroll 25s linear infinite;
+}
+/*轮播图+推荐部分*/
+.lunbo{
+	position: absolute;
+	left: 150px;
+	margin-top: 20px;
+	width: 720px;
+	height: 360px;
+	border: 1px solid #ccc;
+}
+.slide{
+	/*box-shadow: 5px 5px 10px black;*/
+	width:720px;
+	height:360px;
+	margin:0px auto;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+/*ul保证足够的宽*/
+.slide ul{
+	width:1000%;
+	position:absolute;
+	top:0px;
+	left: 0px;
+}
+.slide ul li{
+	width:720px;
+	height: 360px;
+	float: left;
+}
+.slide ul li img{
+	width:720px;
+	height: 360px;
+}
+ol li.current{
+	border: 5px solid white;
+}
+ol{
+	position: absolute;
+	bottom: 0px;
+	height: 40px;
+	/*line-height: 20px;*/
+	text-align: center;	
+	display: none;
+}
+ol li{
+	width:70px;
+	height: 40px;
+	background: #fff;
+	border-right:1px solid #ccc;
+	float:left;
+}
+ol li img{
+	width:71px;
+	height: 36px;
+}
+.reco{
+	margin-top: 15px;
+	position: absolute;
+	right: 180px;
+	width: 240px;
+	height: 345px;
+	padding: 10px;
+	/*border:1px solid red;*/
+	background: #fff;
+}
+.shadowline{
+	width: 100%;
+}
+.reco img{
+	width: 100%;
+	margin-top: 4px;
+}
+/*生活部分*/
+.life,.fashion,.hobby,.fashion2{
+	padding: 10px;
+	width: 720px;
+	height: 410px;
+	position: absolute;
+	top: 500px;
+	left: 150px;
+	background: #fff;
+}
+.more{
+	margin-top: -20px;
+	float:right;
+}
+.life ul,.fashion ul,.hobby ul,.fashion2 ul{
+	margin-top: 20px;
+	width: 720px;
+	height: auto;
+	position: relative;
+}
+.life ul li,.fashion ul li,.hobby ul li,.fashion2 ul li{
+	float: left;
+	width: 218px;
+	height: 156px;
+	border: 3px solid #f3f2f2;
+	text-align: center;
+	background: url(../img/shadow-bg.png);
+}
+.life li img,.fashion li img,.hobby li img,.fashion2 li img{
+	cursor: pointer;
+	transition: transform 3s;
+	transition: all 1s;
+}
+.life li img:hover,.fashion li img:hover,.hobby li img:hover,.fashion2 li img:hover{
+	transform: rotate(720deg);
+}
+.fashion{
+	top: 950px;
+}
+.hobby{
+	top: 1390px;
+}
+.fashion2{
+	top: 1830px;
+}
+.hot,.wy,.theme,.tour,.vip,.gz{
+	margin-top: 10px;
+	position: absolute;
+	right: 180px;
+	top:  490px;
+	width: 240px;
+	height: 214px;
+	padding: 10px;
+	/*border:1px solid red;*/
+	background: #fff;
+}
+.hot img,.width{
+	width: 100%;
+	margin-top: 4px;
+}
+.wy{
+	height: 254px;
+	top: 734px;
+}
+.floatr{
+	float: right;
+	margin-right: 120px;
+}
+.floatrr{
+	float: right;
+	margin-right: 40px;
+}
+.theme{
+	height: 290px;
+	top: 1018px;
+}
+.center{
+	text-align: center;
+}
+.tour{
+	top: 1340px;
+	height: 280px;
+}
+.tour ul li{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dotted #ccc;
+}
+.tour ul li:nth-child(1){
+	height: 80px;
+	border-bottom: 1px dotted #ccc;
+}
+.vip{
+	top: 1650px;
+	height: 310px;
+}
+.vip ul li{
+	border-bottom: 1px dotted #ccc;
+}
+.gz{
+	top: 1990px;
+	height: 250px;
+}
+.gz #saoma{
+	position: absolute;
+	height: 220px;
+	z-index: 111;
+	top: 48px;
+	display: none;
+	border-radius: 10px;
+}
+.gz ul{
+	margin-top: 5px;
+}
+.gz ul li{
+	float: left;
+	width: 110px;
+	height: 70px;
+	cursor:pointer;
+}
+.gz ul li:nth-child(1){
+	background: url(../img/sites.png) -220px 0px;
+	border: 1px solid #ccc;
+	border-left:none ;
+}
+.gz ul li:nth-child(2){
+	background: url(../img/sites.png) -333px -140px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.gz ul li:nth-child(3){
+	background: url(../img/sites.png) -220px -70px;
+	border-right: 1px solid #ccc;
+}
+.gz ul li:nth-child(4){
+	background: url(../img/sites.png) -333px -70px;
+}
+.gz ul li:nth-child(5){
+	background: url(../img/sites.png) -220px -140px;
+	border: 1px solid #ccc;
+	border-left:none ;
+	border-bottom:none ;
+}
+.gz ul li:nth-child(6){
+	background: url(../img/sites.png) -220px -210px;
+	border-top: 1px solid #ccc;
+}
+.gz ul li:nth-child(7){
+	background: url(../img/sites.png) -220px 0px;
+}
+
+.footerline{
+	width: 100%;
+	position: absolute;
+	top:2280px;
+	
+}
+footer{
+	width: 100%;
+	position: absolute;
+	top:2290px;
+}
+footer p{
+	text-align: center;
+}
+img#backtop{
+	position: absolute;
+	width: 48px;
+	top:440px;
+	right: 0px;
+	cursor: pointer;
+}
+img#feedback{
+	position: absolute;
+	width: 48px;
+	top:500px;
+	right: 0px;
+}
+.fixed{
+	position:fixed;
+	top:0px;
+	left:0px;
+}
+.video{
+	position: relative;
+	width:200px;
+	height: 135px;
+	border-radius: 10px;
+	margin:10px auto;
+	background: #000;
+	overflow: hidden;
+	padding:10px;
+	cursor: pointer;
+	box-shadow: 0px 0px 10px lightseagreen;
+}
+/*大按钮--圆的*/
+.video-js .vjs-big-play-button{
+	width:3em;
+	height: 3em;
+	font-size:3em;
+	line-height: 3em;
+	border-radius: 3em;
+	border-width: 0.15em;
+}
+/*里边小三角---在伪类中修改*/
+.video-js .vjs-big-play-button::before{
+	font-size:1.5em;
+}
+
+/*暂停,大按钮居中*/
+.vjs-paused.vjs-big-play-button,
+.vjs-paused.vjs-has-started .vjs-big-play-button{
+	display: block;
+}			
+/*点击屏幕暂定*/
+.vedio-js .vjs-playing .vjs-tech{
+	pointer-events: auto;
+}
+.Text{
+	display: none;
+	position: absolute;
+	top:10px;
+	right:10px;
+	width:100px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color:limegreen;
+	font-size:24px;
+}
+/*模拟百度搜索*/
+.search{
+	position: relative;
+}
+ul.searchul{
+	position: absolute;
+	top: 35px;
+    line-height: 10px;
+    margin-left:-150px;
+    list-style: none;
+    display: none;
+    width:203px;
+    height:160px;
+    border: 1px solid gray;
+    padding: 10px;
+    border-top: 0;
+    z-index: 100;
+    background: #fff;
+}
+ul.searchul li{
+	padding-left:10px;
+	line-height:30px;
+    font-size:14px;
+    display: block;
+}
+ul.searchul li a{
+	color:blue;
+	text-decoration: none;
+} 
+ul.searchul li:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}

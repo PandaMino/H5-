@@ -1,0 +1,120 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	list-style: none;
+}
+body{
+	position: relative;
+	background: url(../img/wallpaper.jpg);
+}
+.register{
+	padding:24px 0px;
+	margin: 180px auto;
+	width: 900px;
+	height: 400px;
+	background: #fff;
+}
+.regleft{
+	padding:0px 24px;
+	position: relative;
+	float: left;
+	width: 400px;
+	height: 360px;
+	border-right: 1px solid #ccc;
+}
+h3{
+	width: 78px;
+	border-bottom: 4px solid greenyellow; 
+}
+.regright{
+	position: relative;
+	padding:0px 24px;
+	float: left;
+	width: 400px;
+	height: 360px;
+	/*border: 1px solid #ccc;*/
+}
+
+.regleft table{
+	margin-top: 40px;
+	width: 360px;
+	height: 200px;
+	/*border: 1px solid #000;*/
+}
+.regleft table tr{
+	height: 70px;
+}
+.regleft table td{
+	height: 34px;
+}
+.regleft table td input[type='password'],
+.regleft table td input[type='email']{
+	width: 260px;
+	height: 34px;
+	border: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+input[type='submit']{
+	width: 140px;
+	height: 40px;
+	color: white;
+	background: limegreen;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	margin-left: 110px;
+	margin-top:20px;
+}
+button{
+	width: 196px;
+	height: 40px;
+	font-size: 14px;
+	border: none;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	background:  #f7f6f6;
+	cursor: pointer;
+	transition: transform 1s;
+	transition: all 1s;
+}
+button:hover{
+	transform: scale(0.9,0.9);
+}
+button.qq{
+	margin-top: 50px;
+	padding-left: px;
+	background: url(../img/qq.jpg) -5px no-repeat;
+}
+button.xl{
+	margin-top: 50px;
+	padding-left: 24px;
+	margin-left: 10px;
+	background: url(../img/weibo.png) -4px -4px no-repeat;
+}
+button.tb{
+	margin-top: 26px;
+	padding-left: px;
+	background: url(../img/tb.png) 4px 6px no-repeat;
+}
+button.tx{
+	margin-left: 10px;
+	margin-top: 26px;
+	padding-left: 38px;
+	background: url(../img/tx.png) 0px 2px no-repeat;
+}
+button.db{
+	margin-top: 26px;
+	padding-left: 30px;
+	background: url(../img/db.png) 2px 6px no-repeat;
+}
+.regright table tr{
+	height: 24px;
+}
+.regright a{
+	float: right;
+	margin-top: 60px;
+	color: blueviolet;
+	font-size: 14px;
+}
